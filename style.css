@@ -54,6 +54,17 @@ section { max-width: 1200px; margin: 0 auto; padding: 100px 24px; border-radius:
 .beyond-work-image img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #E5E7EB; }
 .beyond-work-content h4 { font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
 
+.beyond-work-image {
+  width: 100%;
+  height: auto; /* ensures container grows with image */
+  overflow: hidden;
+}
+.beyond-work-image img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
 /* CTA */
 .cta { background: linear-gradient(135deg, #1E3A8A, #2563EB); color: #fff; border-radius: 28px; padding: 120px 40px; text-align: center; box-shadow: 0 36px 80px rgba(0,0,0,0.25); }
 .cta h3, .cta p { color: #fff; }
@@ -80,4 +91,5 @@ section { max-width: 1200px; margin: 0 auto; padding: 100px 24px; border-radius:
   .hero-subtitle{font-size:0.95rem}
   section{padding:60px 20px}
 }
+
 
