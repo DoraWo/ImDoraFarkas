@@ -68,6 +68,29 @@ const travelObserver = new IntersectionObserver(
   }, { threshold: 0.25 }
 );
 
+// Fade-in for general elements (already exists)
+const fadeElements = document.querySelectorAll(".fade-in");
+const fadeObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add delay based on index for stagger effect
+        const index = Array.from(fadeElements).indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 200); // 200ms delay between items
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+fadeElements.forEach(el => {
+  fadeObserver.observe(el);
+});
+
+
 travelItems.forEach((item, index) => {
   item.style.transitionDelay = `${index * 0.15}s`;
   travelObserver.observe(item);
@@ -79,4 +102,5 @@ window.addEventListener("scroll", () => {
   const offset = window.pageYOffset;
   heroImage.style.transform = `translateY(${offset * 0.15}px)`;
 });
+
 
