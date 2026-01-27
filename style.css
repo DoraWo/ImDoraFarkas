@@ -64,10 +64,15 @@ p { font-size:1.05rem; color:var(--muted); max-width:720px; margin-bottom:16px; 
 
 .cta-buttons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  justify-content: center; /* center horizontally */
   gap: 20px; /* space between buttons */
   margin-top: 30px;
+}
+
+.cta-button {
+  display: inline-block; /* ensure they sit side by side */
+  text-align: center;
 }
 
 /* ANIMATION */
@@ -77,5 +82,6 @@ p { font-size:1.05rem; color:var(--muted); max-width:720px; margin-bottom:16px; 
 /* RESPONSIVE */
 @media(max-width:900px){ .hero{grid-template-columns:1fr;text-align:center;gap:40px} h1{font-size:3rem} h2{font-size:1.4rem} }
 @media(max-width:500px){ h1{font-size:2.4rem} h2{font-size:1.1rem} section{padding:60px 20px} }
+
 
 
