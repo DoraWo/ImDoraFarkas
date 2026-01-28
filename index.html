@@ -1,56 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dóra Farkas</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
   <!-- Lucide Icons -->
-  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
-
-  <style>
-    /* RESET */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "Inter", sans-serif; color: #1E2A38; line-height: 1.7; background: #F8F9FB; overflow-x: hidden; }
-
-    /* HEADINGS */
-    h1 { font-size: 3.8rem; font-weight: 700; }
-    h2 { font-size: 1.8rem; font-weight: 500; color: #4B5563; margin-top: 8px; }
-    .hero-subtitle { font-size: 1.2rem; font-weight: 500; margin: 12px 0 24px; color: #6B7280; }
-    h3 { font-size: 2rem; font-weight: 600; text-align: center; margin-bottom: 50px; position: relative; }
-    h4 { font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; }
-    p { color: #4B5563; }
-
-    /* SECTIONS */
-    section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
-
-    /* HERO */
-    .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; min-height: 85vh; }
-    .hero-image img { width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-
-    /* HIGHLIGHTS */
-    .highlight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 36px; }
-    .highlight-card { background: #fff; border-radius: 28px; padding: 24px; text-align: center; box-shadow: 0 12px 28px rgba(0,0,0,0.06); }
-    .highlight-card i { font-size: 2rem; color: #4A90E2; margin-bottom: 12px; display: block; }
-
-    /* CTA */
-    .cta { background: linear-gradient(135deg, #1E3A8A, #2563EB); color: #fff; text-align: center; border-radius: 28px; padding: 120px 40px; }
-    .cta h3, .cta p { color: #fff; }
-    .cta-buttons { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
-    .cta-button { background: #fff; color: #1E3A8A; padding: 18px 48px; border-radius: 999px; font-weight: 600; text-decoration: none; transition: transform 0.3s ease; }
-    .cta-button:hover { transform: translateY(-3px); }
-
-    /* FADE-IN */
-    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; text-align: center; } }
-    @media (max-width: 500px) { h1 { font-size: 2.4rem; } }
-  </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -60,14 +22,10 @@
       <h1>Dóra Farkas</h1>
       <h2>Strategic Thinker</h2>
       <p class="hero-subtitle">Innovation · Human–Robot Interaction · Sustainability · Education</p>
-      <p>
-        I work at the intersection of people, technology, and sustainable transformation —
-        translating complexity into thoughtful, actionable strategies.
-      </p>
+      <p>I work at the intersection of people, technology, and sustainable transformation — translating complexity into thoughtful, actionable strategies.</p>
     </div>
     <div class="hero-image">
-      <!-- Embedded placeholder image so it works immediately -->
-      <img src="https://via.placeholder.com/400x500.png?text=D%C3%B3ra+Farkas" alt="Portrait of Dóra Farkas">
+      <img src="images/dorika.jpeg" alt="Portrait of Dóra Farkas">
     </div>
   </section>
 
@@ -75,10 +33,7 @@
   <section class="about fade-in">
     <span class="section-label">How I think</span>
     <h3>Human-centred, strategic, future-oriented</h3>
-    <p>
-      My work is grounded in the belief that innovation succeeds only when it is human-centred,
-      strategically grounded, and future-oriented.
-    </p>
+    <p>My work is grounded in the belief that innovation succeeds only when it is human-centred, strategically grounded, and future-oriented. With a background spanning Computational Social Systems, International Business, and Sustainability & Digitalization, I approach challenges systemically — identifying patterns, connecting stakeholders, and designing actionable solutions that balance impact, feasibility, and long-term value.</p>
   </section>
 
   <!-- WHAT I BRING -->
@@ -87,38 +42,127 @@
     <h3>Capabilities & Strengths</h3>
 
     <div class="highlight-grid">
-      <div class="highlight-card fade-in">
+      <div class="highlight-card">
         <i data-lucide="layers"></i>
         <h4>Vision & Execution</h4>
-        <p>Turning complex ideas into structured, actionable solutions.</p>
+        <p>Turning complex ideas into structured, actionable solutions with measurable impact.</p>
       </div>
-
-      <div class="highlight-card fade-in">
+      <div class="highlight-card">
         <i data-lucide="users"></i>
         <h4>Digital Education</h4>
-        <p>Empowering students and fostering collaboration.</p>
+        <p>Empowering students, fostering collaboration, and supporting professional digital skills.</p>
       </div>
-
-      <div class="highlight-card fade-in">
+      <div class="highlight-card">
         <i data-lucide="settings"></i>
         <h4>Operational Excellence</h4>
-        <p>Optimizing processes and digital transformation.</p>
+        <p>Optimizing processes and strategies in procurement, projects, and digital transformation.</p>
       </div>
-
-      <div class="highlight-card fade-in">
+      <div class="highlight-card">
         <i data-lucide="leaf"></i>
         <h4>Sustainability Expertise</h4>
-        <p>Integrating ESG and circular economy principles.</p>
+        <p>Integrating ESG principles, climate action, and circular economy into projects and strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT FOCUS & COLLABORATION -->
+  <section class="highlight-section fade-in">
+    <span class="section-label">Current focus & collaboration</span>
+    <h3>Active Projects & Partnerships</h3>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <i data-lucide="zap"></i>
+        <h4>AI Foresight</h4>
+        <p>Building tools to help organizations anticipate emerging trends and implement sustainable strategies.</p>
+      </div>
+      <div class="highlight-card">
+        <i data-lucide="tree"></i>
+        <h4>The Generation Forest</h4>
+        <p>Designing user-centered solutions to make climate and social action accessible for businesses.</p>
+      </div>
+      <div class="highlight-card">
+        <i data-lucide="users"></i>
+        <h4>CoachMatcher</h4>
+        <p>Supporting community building, visibility, and content collaboration for coaching platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED PROJECTS -->
+  <section class="work fade-in">
+    <span class="section-label">Selected projects</span>
+    <h3>Research & Impact</h3>
+    <div class="work-grid">
+      <div class="work-item">
+        <span>01</span>
+        <div>
+          <p>Co-designed a <strong>mobile application interface</strong> for usability and sustainable behavior promotion.</p>
+          <div class="project-tags"><span>UX Research</span><span>Sustainability</span></div>
+        </div>
+      </div>
+      <div class="work-item">
+        <span>02</span>
+        <div>
+          <p>Co-designed and evaluated an <strong>AI-based fruit recognition system</strong> exploring interface design and tech performance.</p>
+          <div class="project-tags"><span>AI Systems</span><span>HCI</span></div>
+        </div>
+      </div>
+      <div class="work-item">
+        <span>03</span>
+        <div>
+          <p>Contributed to <strong>urban rehabilitation planning in Valencia</strong> via multi-stakeholder collaboration.</p>
+          <div class="project-tags"><span>Urban Policy</span><span>Governance</span></div>
+        </div>
+      </div>
+      <div class="work-item">
+        <span>04</span>
+        <div>
+          <p>Conducted an <strong>experimental study</strong> on in-group vs out-group recognition in human–robot teams.</p>
+          <div class="project-tags"><span>Human–Robot Interaction</span><span>Experimental</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVEL & SUSTAINABILITY -->
+  <section class="fade-in">
+    <span class="section-label">Beyond Work</span>
+    <h3>Exploring Our Wonderful World</h3>
+
+    <p class="travel-intro">
+      In my life, sustainability and travel don’t exclude each other. The more we see and experience how wonderful our world is, the stronger the desire to protect it for future generations.
+    </p>
+
+    <div class="beyond-work-grid">
+      <div class="beyond-work-item fade-in">
+        <div class="beyond-work-image">
+          <img src="images/dorika_vulkan.jpeg" alt="Travel Photo 1" />
+        </div>
+        <div class="beyond-work-content">
+          <h4>Adventures Abroad</h4>
+          <p>Discovering new cultures, landscapes, and unforgettable experiences.</p>
+        </div>
+      </div>
+      <div class="beyond-work-item fade-in">
+        <div class="beyond-work-image">
+          <img src="images/dorika_hegyfolyoval.jpeg" alt="Travel Photo 2" />
+        </div>
+        <div class="beyond-work-content">
+          <h4>Moments of Wonder</h4>
+          <p>Capturing the beauty of the world through travel and exploration.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta fade-in">
+  <section class="cta fade-in visible">
     <h3>Let’s work together!</h3>
     <p>
-      I’m exploring opportunities in innovation, strategy, and sustainability —
-      ideally based in Aachen or remotely within Europe.
+      I’m exploring opportunities at the intersection of innovation, strategy, and sustainability — 
+      ideally based in Aachen, Germany, or remotely within Europe. 
+      If this resonates with you, I’d love to connect and explore possibilities together.
     </p>
 
     <div class="cta-buttons">
@@ -129,39 +173,8 @@
     </div>
   </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-      // Lucide icons
-      lucide.createIcons();
-
-      // Fade-in observer
-      const fadeElements = document.querySelectorAll(".fade-in");
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-
-      fadeElements.forEach((el, index) => {
-        el.style.transitionDelay = `${index * 0.15}s`;
-        observer.observe(el);
-      });
-
-      // Hero parallax
-      const heroImage = document.querySelector(".hero-image img");
-      if (heroImage) {
-        window.addEventListener("scroll", () => {
-          heroImage.style.transform = `translateY(${window.scrollY * 0.15}px)`;
-        });
-      }
-
-    });
-  </script>
-
+  <script>lucide.createIcons();</script>
+  <script src="script.js"></script>
 </body>
 </html>
 
