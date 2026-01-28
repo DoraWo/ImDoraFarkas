@@ -1,4 +1,4 @@
-/* ===================== RESET & BASE ===================== */
+/* ===================== RESET & BODY ===================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +26,7 @@ h3 { font-size: 2rem; font-weight: 600; margin-bottom: 50px; }
 h4 { font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; }
 p { font-size: 1rem; color: #4B5563; margin-bottom: 16px; }
 
-/* ===================== HERO SECTION ===================== */
+/* ===================== HERO ===================== */
 .hero {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -34,16 +34,13 @@ p { font-size: 1rem; color: #4B5563; margin-bottom: 16px; }
   min-height: 85vh;
   align-items: center;
 }
-
 .hero-text { z-index: 1; }
-
 .hero-image img {
   width: 100%;
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
-
 .hero-image img:hover {
   transform: scale(1.02);
   box-shadow: 0 25px 50px rgba(0,0,0,0.15);
@@ -80,35 +77,14 @@ section {
   overflow: hidden;
   padding: 24px;
   box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  transition: all 0.4s ease;
   text-align: center;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.highlight-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.highlight-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 44px rgba(0,0,0,0.08);
-}
-
-.highlight-card i {
-  font-size: 2rem;
-  color: #4A90E2;
-  margin-bottom: 12px;
-  display: block;
 }
 
 /* ===================== WORK GRID ===================== */
-.work-grid {
-  display: grid;
-  gap: 28px;
-}
-
+.work-grid { display: grid; gap: 28px; }
 .work-item {
   display: grid;
   grid-template-columns: 60px 1fr;
@@ -117,64 +93,17 @@ section {
   border-radius: 20px;
   background: #F9FAFC;
   border: 1px solid #E5E9EF;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-.work-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 44px rgba(0,0,0,0.08);
-}
-
-.work-item span {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #4A90E2;
-}
-
-.project-tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.project-tags span {
-  font-size: 0.75rem;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: #EEF3FB;
-  color: #4A90E2;
-}
-
-/* ===================== BEYOND WORK GRID ===================== */
+/* ===================== TRAVEL GRID ===================== */
 .beyond-work-grid-2x2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 250px);
   gap: 20px;
-}
-
-.beyond-work-item.large {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.beyond-work-item.small {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.beyond-work-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 24px;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.beyond-work-item:hover img {
-  transform: scale(1.05);
 }
 
 .beyond-work-item {
@@ -184,12 +113,22 @@ section {
   border-radius: 24px;
   box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-.beyond-work-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+.beyond-work-item.large { grid-column: span 2; grid-row: span 2; }
+.beyond-work-item.small { grid-column: span 2; grid-row: span 1; }
+
+.beyond-work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+  transition: transform 0.5s ease;
 }
+.beyond-work-item:hover img { transform: scale(1.05); }
 
 .beyond-work-overlay {
   position: absolute;
@@ -201,16 +140,8 @@ section {
   color: #fff;
 }
 
-.beyond-work-overlay h4 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.beyond-work-overlay p {
-  font-size: 1rem;
-  margin: 0;
-}
+.beyond-work-overlay h4 { font-size: 1.4rem; font-weight: 600; margin-bottom: 6px; }
+.beyond-work-overlay p { font-size: 1rem; margin: 0; }
 
 /* ===================== CTA ===================== */
 .cta {
@@ -223,7 +154,6 @@ section {
 }
 
 .cta h3, .cta p { color: #fff; }
-
 .cta h3 { font-size: 2.4rem; font-weight: 700; margin-bottom: 20px; }
 .cta p { font-size: 1.2rem; margin-bottom: 40px; line-height: 1.6; }
 
@@ -259,12 +189,20 @@ section {
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s ease var(--delay, 0s), transform 0.8s ease var(--delay, 0s);
 }
 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===================== HOVER EFFECTS ===================== */
+.highlight-card:hover,
+.work-item:hover,
+.beyond-work-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
 
 /* ===================== RESPONSIVE ===================== */
@@ -273,15 +211,8 @@ section {
   .hero-text h1 { font-size: 3rem; }
   .hero-text h2 { font-size: 1.4rem; }
   .hero-subtitle { font-size: 1rem; }
-  .beyond-work-grid-2x2 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  .beyond-work-item.large,
-  .beyond-work-item.small {
-    grid-column: 1 / -1;
-    grid-row: auto;
-  }
+  .beyond-work-grid-2x2 { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+  .beyond-work-item.large, .beyond-work-item.small { grid-column: 1 / -1; grid-row: auto; }
 }
 
 @media (max-width: 500px) {
@@ -291,4 +222,3 @@ section {
   section { padding: 60px 20px; }
   .beyond-work-grid-2x2 { grid-template-columns: 1fr; }
 }
-
