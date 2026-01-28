@@ -8,6 +8,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -124,9 +127,8 @@
   <section class="fade-in">
     <span class="section-label">Beyond Work</span>
     <h3>Exploring Our Wonderful World</h3>
-    <p class="travel-intro">
-      In my life, sustainability and travel don’t exclude each other. The more we see and experience how wonderful our world is, the stronger the desire to protect it for future generations.
-    </p>
+    <p class="travel-intro">In my life, sustainability and travel don’t exclude each other. The more we see and experience how wonderful our world is, the stronger the desire to protect it for future generations.</p>
+
     <div class="beyond-work-grid-2x2">
       <div class="beyond-work-item large fade-in">
         <img src="images/dorika_vulkan.jpeg" alt="Travel Vulkan">
@@ -160,39 +162,19 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta fade-in">
+  <section class="cta fade-in visible">
     <h3>Let’s work together!</h3>
     <p>I’m exploring opportunities at the intersection of innovation, strategy, and sustainability — ideally based in Aachen, Germany, or remotely within Europe. If this resonates with you, I’d love to connect and explore possibilities together.</p>
+
     <div class="cta-buttons">
       <a href="mailto:dora.farkas@outlook.de" class="cta-button">Get in touch</a>
-      <a href="https://www.linkedin.com/in/dora-f-273159321" class="cta-button" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      <a href="https://www.linkedin.com/in/dora-f-273159321" class="cta-button" target="_blank" rel="noopener noreferrer">
+        Connect on LinkedIn
+      </a>
     </div>
   </section>
 
-  <!-- Fade-in JavaScript -->
-  <script>
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    function isInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) - 100;
-    }
-
-    function handleFadeIn() {
-      fadeElements.forEach(el => {
-        if (isInViewport(el)) {
-          el.classList.add('visible');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', handleFadeIn);
-    window.addEventListener('load', handleFadeIn);
-    window.addEventListener('resize', handleFadeIn);
-
-    handleFadeIn();
-  </script>
-
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
-
